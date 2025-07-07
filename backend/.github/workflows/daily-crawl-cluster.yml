@@ -1,0 +1,107 @@
+name: Daily News Crawling and Clustering
+
+on:
+  # 매일 UTC 15:00 (한국시간 00:00)에 실행
+  schedule:
+    - cron: '0 15 * * *'
+  
+  # 수동 실행 가능
+  workflow_dispatch:
+    inputs:
+      run_crawler:
+        description: 'Run Crawler'
+        required: true
+        default: 'true'
+        type: boolean
+      run_cluster:
+        description: 'Run Clustering'
+        required: true
+        default: 'true'
+        type: boolean
+
+jobs:
+  crawl-and-cluster:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        # 크롤러용 추가 의존성
+        pip install aiohttp beautifulsoup4 lxml
+        # 클러스터용 추가 의존성  
+        pip install scikit-learn pandas tqdm tiktoken
+    
+    - name: Create data directories
+      run: |
+        mkdir -p crawler/data/raw
+        mkdir -p backend/results
+    
+    - name: Run News Crawler
+      if: ${{ github.event.inputs.run_crawler != 'false' }}
+      working-directory: ./crawler
+      env:
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        echo "🔍 Starting news crawling..."
+        python main_crawler.py
+        echo "✅ Crawling completed"
+    
+    - name: Upload crawled data to Supabase
+      if: ${{ github.event.inputs.run_crawler != 'false' }}
+      working-directory: ./backend
+      env:
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        echo "📤 Uploading articles to Supabase..."
+        python supabase_uploader.py
+        echo "✅ Upload completed"
+    
+    - name: Run Clustering Analysis
+      if: ${{ github.event.inputs.run_cluster != 'false' }}
+      working-directory: ./backend
+      env:
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        echo "🧠 Starting clustering analysis..."
+        python main_cluster.py
+        echo "✅ Clustering completed"
+    
+    - name: Archive results
+      uses: actions/upload-artifact@v3
+      with:
+        name: crawl-cluster-results-${{ github.run_number }}
+        path: |
+          crawler/data/raw/*.json
+          backend/results/*.json
+          backend/results/*.txt
+        retention-days: 30
+    
+    - name: Display Summary
+      run: |
+        echo "🎉 Daily crawling and clustering completed!"
+        echo "📊 Check the logs above for detailed results"
+        echo "📁 Results archived as artifacts" 
