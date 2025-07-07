@@ -245,7 +245,8 @@ async def get_stats():
 
 if __name__ == "__main__":
     import uvicorn
+    port = int(os.getenv("PORT", 8000))
     print("🚀 BlindSpot API 서버 시작...")
-    print("📖 API 문서: http://localhost:8000/docs")
-    print("🔍 이슈 목록: http://localhost:8000/api/issues")
-    uvicorn.run(app, host="0.0.0.0", port=8000) 
+    print(f"📖 API 문서: http://localhost:{port}/docs")
+    print(f"🔍 이슈 목록: http://localhost:{port}/api/issues")
+    uvicorn.run(app, host="0.0.0.0", port=port) 
