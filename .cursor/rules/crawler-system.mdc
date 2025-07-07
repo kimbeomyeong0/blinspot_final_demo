@@ -1,0 +1,80 @@
+# 크롤링 시스템 구조
+
+## 📂 파일 구조
+- `main_crawler.py`: 전체 크롤러 통합 실행
+- `crawl_hani.py`: 한겨레 신문 크롤러
+- `crawl_chosun.py`: 조선일보 크롤러  
+- `crawl_kbs.py`: KBS 뉴스 크롤러
+- `crawl_ytn.py`: YTN 뉴스 크롤러
+- `utils/`: 공통 유틸리티 (로거, 파서 등)
+
+## 🎯 크롤링 목표
+- **각 언론사별 90개 기사** (정치 30개, 사회 30개, 경제 30개)
+- **본문 추출 성공률 98% 이상**
+- **4개 언론사 총 360개 기사** 수집
+
+## 🔧 기술 스택
+- **Playwright**: 브라우저 자동화 (비동기 처리)
+- **BeautifulSoup**: HTML 파싱 및 본문 추출
+- **aiohttp**: HTTP 요청 (본문 추출용)
+
+## 📊 현재 성과
+- **총 295개 기사 수집** (목표 360개 대비 82%)
+- **98.3% 본문 추출 성공률**
+- **언론사별 성과**:
+  - 한겨레: 90개 ✅ (100% 본문 성공)
+  - 조선일보: 90개 ✅ (97.8% 본문 성공)
+  - YTN: 90개 ✅ (100% 본문 성공)
+  - KBS: 25개 (88% 본문 성공) - 개선 필요
+
+## 🛠️ 공통 구조
+```python
+async def crawl_news(categories, target_count=90):
+    """
+    각 언론사별 크롤링 함수의 공통 구조
+    """
+    all_articles = []
+    
+    for category in categories:
+        # 1. 브라우저 실행
+        # 2. 카테고리별 URL 접근
+        # 3. 더보기/페이지네이션 처리
+        # 4. 기사 목록 수집
+        # 5. 본문 추출
+        # 6. JSON 저장
+    
+    return all_articles
+```
+
+## 🎨 본문 추출 전략
+각 언론사별로 다양한 CSS 셀렉터를 시도하여 본문 추출 성공률 최대화:
+```python
+content_selectors = [
+    '.article-content',
+    '.news-content', 
+    '.content-body',
+    # ... 언론사별 맞춤 셀렉터
+]
+```
+
+## 📝 데이터 형식
+```json
+{
+    "title": "기사 제목",
+    "url": "기사 URL",
+    "category": "정치|사회|경제",
+    "source": "언론사명",
+    "content": "본문 내용",
+    "crawled_at": "2024-01-01T00:00:00"
+}
+```
+
+## ⚡ 성능 최적화
+- 불필요한 리소스 차단 (이미지, CSS, 폰트)
+- 비동기 처리로 속도 향상
+- 타임아웃 최적화
+- 중복 제거 로직
+description:
+globs:
+alwaysApply: false
+---

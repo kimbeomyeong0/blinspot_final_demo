@@ -1,0 +1,289 @@
+{
+  "clusters": [
+    {
+      "category": "정치",
+      "summary": "한미 정상회담과 관세 협상 논의를 위한 위성락 안보실장의 방미가 주요 이슈.",
+      "article_count": 10,
+      "bias_left": 2,
+      "bias_center": 6,
+      "bias_right": 2,
+      "article_ids": [
+        "13e3a5cc-5a32-47e0-8789-5b3acac5dfc8",
+        "e57d033b-a793-46b9-9b6f-9cdc7c3577cf",
+        "862b5273-2980-4372-9348-9d13c6c85634",
+        "1430e2f8-e3ef-435c-ab24-d84bf66d9c32",
+        "bf257709-d5da-451c-b8b6-bd1f23bcc9cb",
+        "786fbbd9-c406-4f48-813b-48a326cce242",
+        "2cabf5e3-279d-48f4-a21b-d504358c1205",
+        "04e06335-d370-4fe3-b333-95b12c41f663",
+        "4386d163-325d-4fd3-872d-07467eeb4977",
+        "b708ea75-cde5-4c28-8dc3-d94d608966bd"
+      ]
+    },
+    {
+      "category": "정치",
+      "summary": "이재명 정부 첫 31.8조 추경안 통과, 특활비 논란과 국회 갈등 속에 집행될 예",
+      "article_count": 40,
+      "bias_left": 11,
+      "bias_center": 19,
+      "bias_right": 10,
+      "article_ids": [
+        "d1301d9a-bb84-49bd-8cf9-d6026bc79fb9",
+        "381eb6d8-bed8-4af8-ada8-e65e1d418841",
+        "8d8c66b1-4eaa-4403-9fdc-df35db5dc42d",
+        "02d47de6-c192-42d5-843f-d19fb99542bb",
+        "32a3e741-024e-47a0-acae-879074b9f577",
+        "974f500d-45cf-4fb2-b9c4-78b24af9a0d0",
+        "1b2decfc-d3be-471c-b0dc-302509dcf63b",
+        "2098ff76-6b77-45a6-a7bc-92526049a704",
+        "b8023c29-615f-4cde-b706-39f19cc9ae57",
+        "fa2bb444-ae0f-4389-ad15-fe85efd658ef",
+        "2cf2bb65-8b69-4c04-8c31-6db44ccb1879",
+        "395d7921-d507-417d-a342-b953ce258c5c",
+        "4aa58137-5892-4a84-893c-d5b9f47633a4",
+        "5de32d15-76a9-42e6-a495-45f4b7c2a00b",
+        "ed067f34-0c93-4c3b-be3d-d877ccdeb5e7",
+        "6a1a47e1-0f95-40d9-aff9-5b194201017f",
+        "4c6739d6-7955-4af1-b4ae-d2bc98298832",
+        "975acd73-1311-4b6e-a808-5e68fa827061",
+        "4ba49f52-6161-47be-a52b-d43a78b3b667",
+        "749ef73b-8547-4e66-8d93-ab97e15caebc",
+        "a8407abe-c41d-4ca4-89aa-575e0f164912",
+        "842e95da-0ef6-4518-a9b7-0753972c5540",
+        "520c9d80-989e-4a77-8745-1766370566df",
+        "8e440129-69e1-4fbc-965d-77289636d5c7",
+        "b69d84e2-a4ba-4137-a5e4-aa8c1c10669a",
+        "6a9aa895-0656-464a-b0b4-fe2ea9d80321",
+        "41b89832-cb49-4401-b347-5ec9e6ecd5b9",
+        "787047d8-9809-480c-b5ba-b6f46c72f678",
+        "c7eb8a8b-8423-47bf-8079-c78afda34e97",
+        "5e9b1c8a-1e21-437a-8a88-b0353ff0f3c7",
+        "bace8069-1f0d-4600-9b83-02607e9eff99",
+        "a119ed40-fe8e-448a-a297-be02dcd7f4cd",
+        "b16f7b3f-0a7b-4298-9afa-7e294c2db9d5",
+        "d3f29796-371c-4e86-952e-c9bbb0bacf66",
+        "4bce0bbb-db9a-4359-86da-aa04e1b1b316",
+        "d184c65b-48a1-476a-9918-86571bb9ee67",
+        "242fd9a3-18e2-4ba9-8114-71dcb9594f4a",
+        "9d2eca7f-5d79-4838-9f7b-e7fb8a1f417e",
+        "6fb9db41-02a1-4c16-b3bc-938ddccd88f2",
+        "a503ab89-3893-4de3-9a02-d798ff41e989"
+      ]
+    },
+    {
+      "category": "정치",
+      "summary": "이 대통령, 이완규 법제처장 면직 재가 논란",
+      "article_count": 4,
+      "bias_left": 1,
+      "bias_center": 2,
+      "bias_right": 1,
+      "article_ids": [
+        "f7845969-eda1-4991-9a19-a0bf4fe3b533",
+        "ad275a03-6a7b-47f5-81bb-434c9eedca29",
+        "ece183cf-b584-425e-8a64-9bfcd8dc8e34",
+        "b0705365-46ec-4d81-8b84-465b458ffc6d"
+      ]
+    },
+    {
+      "category": "정치",
+      "summary": "김민석 총리 임명과 국정 운영에 대한 관심 증가",
+      "article_count": 5,
+      "bias_left": 4,
+      "bias_center": 0,
+      "bias_right": 1,
+      "article_ids": [
+        "33ab03c9-4c64-4b33-b5ad-7d059c383891",
+        "8afe1ef7-d0c8-43e1-8058-5803a55dc4f0",
+        "3ce6b484-3845-47c4-9d02-17757a50b345",
+        "89168c8c-6666-4c4b-bd95-55c98cbd9f49",
+        "0b5e00ae-c71e-47b4-9340-97d67b87696e"
+      ]
+    },
+    {
+      "category": "정치",
+      "summary": "북한 주민이 DMZ를 통해 귀순하는 이슈 발생",
+      "article_count": 3,
+      "bias_left": 1,
+      "bias_center": 0,
+      "bias_right": 2,
+      "article_ids": [
+        "03df0b11-454e-42ac-8b76-58fe42055646",
+        "ec93ca31-9e00-40e6-a063-66383ef23fdb",
+        "9d026c1f-fe5e-405f-92eb-54349d669657"
+      ]
+    },
+    {
+      "category": "정치",
+      "summary": "지역 당심을 공략하는 정청래와 박찬대, 민심 잡기 총력전.",
+      "article_count": 3,
+      "bias_left": 0,
+      "bias_center": 2,
+      "bias_right": 1,
+      "article_ids": [
+        "ebb07c07-c382-461d-bcc8-d2ce6d4de843",
+        "9dafd0b2-816b-4bf6-accb-6ece346c37c5",
+        "eab8ea24-c747-4ba8-8ee6-e4c7cc70d08d"
+      ]
+    },
+    {
+      "category": "정치",
+      "summary": "윤 전 대통령, 내란 특검 2차 소환에 대한 외환 혐의 수사와 대통령의 추경 국무회",
+      "article_count": 4,
+      "bias_left": 0,
+      "bias_center": 4,
+      "bias_right": 0,
+      "article_ids": [
+        "0664a973-13af-42f7-8df5-d50e069d41ad",
+        "cc15a832-7793-458a-a876-641b54d2b17f",
+        "097f86ba-908f-4361-be55-3dee9c821605",
+        "efda099c-0c43-46d4-b68a-26dfa7add3d1"
+      ]
+    },
+    {
+      "category": "사회",
+      "summary": "폭염과 비 소식, 주말 날씨 변화에 주목",
+      "article_count": 3,
+      "bias_left": 2,
+      "bias_center": 0,
+      "bias_right": 1,
+      "article_ids": [
+        "808acbd5-ee0b-4013-93ec-3e37869f3888",
+        "afdf7934-5f19-4325-af69-bac801fec8ee",
+        "626bd98a-d224-4927-8ffb-e0407628b638"
+      ]
+    },
+    {
+      "category": "사회",
+      "summary": "내란 특검, 윤석열 2차 조사 집중조사 및 구속영장 청구 가능성",
+      "article_count": 48,
+      "bias_left": 13,
+      "bias_center": 23,
+      "bias_right": 12,
+      "article_ids": [
+        "1ac52646-97cb-4003-9459-d55de732fc28",
+        "48a5675c-2a4f-41f7-99fd-b91011c7f00b",
+        "58783915-42e6-4ee8-bac4-f43cc5141a29",
+        "245bf07e-3f9c-4308-b961-662889679d82",
+        "a7e5da57-1bf9-4ab8-b95d-ae1bb4c0515e",
+        "150d3e7d-9ba9-4670-a235-86e81caf1060",
+        "d4850806-9e25-41d8-8e56-5e8faf779194",
+        "707fae0d-8daf-4916-8d8c-ec4ea934982c",
+        "2c30e28e-4ceb-40e5-8ee9-a386af55d2d9",
+        "3bdf6023-0250-41a6-8be4-72f983a0957e",
+        "af97639a-8e52-498a-90da-c781839ded9e",
+        "f781c159-c8b6-4cf6-a885-2f36066eee70",
+        "3b70f4b8-0e15-4e15-a4e6-4580247d07e9",
+        "06340a19-031d-4479-957e-1653142386ea",
+        "9e6028e5-f347-4df3-8e6f-bcaf8a87e295",
+        "fa320674-59e6-4876-a581-4957b7de8ddc",
+        "f0f591a1-96be-49a9-8d04-dcf0cd74b5c2",
+        "596cac3a-692c-40d8-b2ed-1499563eeedd",
+        "5da0387c-6164-4eff-8d9c-634b1e0b8957",
+        "681eeee0-5a3e-47bd-9526-a6f89f466868",
+        "6836adb1-2fb2-4113-a6f0-a3357bd50684",
+        "fac7b5f4-934e-4db9-8ccb-be983f23e05a",
+        "e3072066-83a2-4741-a4e5-fc5335b63bd6",
+        "52c9bd53-4121-4e14-8ed5-b19e6736098d",
+        "77cdbd31-0fee-40ef-97e7-cb9c0f3a8736",
+        "cfecfd87-97a7-4313-aa01-66115bea0fd2",
+        "086f4507-ac76-4d94-bfbb-06cc8d63b9f6",
+        "429893e8-4cc9-402c-aa4e-221b1f4af412",
+        "b58b53b8-8f34-40b9-bd35-ebc06a5bcdd5",
+        "582fc87d-d727-4c91-ae12-eb0e96e2ee81",
+        "facb2eb1-a196-410f-bfa1-f40da1161d6c",
+        "c46104a2-2d1b-495c-bd3f-15c83120e89a",
+        "ffd03a85-a3e4-45b1-997e-6d1a115624b6",
+        "076cc661-393c-4a3f-b095-9f0fff8b6225",
+        "4f938964-28ec-44e6-8eb2-ab037f674726",
+        "8d224a59-ee49-4585-b202-72f8557fed89",
+        "38d0e210-f96b-4641-90b0-86b498dc9df6",
+        "511bfd36-ec27-43ea-88d6-dce13cf0962e",
+        "a606646c-c103-4237-ac92-51b709e11a25",
+        "81a50284-7eea-4e06-a283-dab5ab3fe531",
+        "ccd5abd3-ea89-492d-aee1-5b25bd1dbffe",
+        "9c223d32-3bb3-4a92-b82f-3eebd5dc1058",
+        "4626341b-8c22-4d19-8f9c-88b7f0977b7f",
+        "1d031b26-beab-4788-bc55-ee5342854e7a",
+        "1a5ca0e0-f130-49f7-abc4-4d41f70f6ac9",
+        "6a80cfda-8a89-4e1e-8765-93ee397abe0e",
+        "27ec83ef-26a8-4784-8ad3-fa44c234b161",
+        "605fdc75-8679-47ec-9c1b-93f119873bbd"
+      ]
+    },
+    {
+      "category": "사회",
+      "summary": "민생회복 소비쿠폰 21일부터 지급, 1인당 15~45만 원 지원",
+      "article_count": 5,
+      "bias_left": 0,
+      "bias_center": 5,
+      "bias_right": 0,
+      "article_ids": [
+        "50554a45-2810-441d-a60f-8623b26db1d9",
+        "a8976219-062e-40a8-b2ac-987cc1203faf",
+        "be6cfe24-daf1-4cab-9eba-955cdc9b975a",
+        "f6585407-13f9-4f05-b11d-e5cf2d53f74e",
+        "236c3532-bd17-4027-b109-7eb627cc7985"
+      ]
+    },
+    {
+      "category": "경제",
+      "summary": "SKT, 해킹 사태로 인한 위약금 면제와 매출 감소로 주가 하락",
+      "article_count": 19,
+      "bias_left": 8,
+      "bias_center": 8,
+      "bias_right": 3,
+      "article_ids": [
+        "18993568-a2c2-4e44-9a15-9fa653baaf36",
+        "a1fbe39e-163b-4861-ad3d-38df8beb1912",
+        "b4f2f377-8e45-4073-a05d-20bd7a532a0e",
+        "4b183f7c-430c-4501-b723-af9133561fb5",
+        "f1d78e5c-0004-4b88-95b7-7ed667eb9236",
+        "7b091b22-90f1-4cb8-8193-9da76e22d30b",
+        "b5305b3f-c430-4a9c-be4a-281ec186080b",
+        "3db5b996-b2c2-40f5-ab83-320ba67f298a",
+        "e275fb4e-4e5a-43d0-98f7-14d68a8db7cf",
+        "8039257a-3833-4ae5-aff5-932387294785",
+        "540dc979-07f7-419a-8046-e2d98cf3af82",
+        "70a0d06e-19b3-4d69-90ec-5fe0de82bbd9",
+        "c09b931d-5657-47dc-887f-bd6e49dc7d9f",
+        "ef4e10b8-6867-475f-9ea1-70a7afc2ca46",
+        "56d95038-b776-4ed8-9e60-5dc16a41cd5e",
+        "f58ee4c0-a6db-4fd7-b075-12627d4b4bad",
+        "5d978376-137f-4567-a559-56bb57f6d538",
+        "014e8db0-2431-4beb-aa81-0303e6848691",
+        "6696b8be-97a6-4e71-b2d3-9e173000d1e7"
+      ]
+    },
+    {
+      "category": "경제",
+      "summary": "정부 지원책으로 소비부진 극복 시도 중",
+      "article_count": 4,
+      "bias_left": 1,
+      "bias_center": 1,
+      "bias_right": 2,
+      "article_ids": [
+        "efcadf76-24b0-4e75-8d82-8cbe6f072269",
+        "69f74ae3-20aa-49cd-97d3-8357b751a762",
+        "b5d85731-749c-49cb-a504-fc98ad6d0772",
+        "e4192ad2-221e-41a1-8859-1799356abd2c"
+      ]
+    },
+    {
+      "category": "경제",
+      "summary": "미 상호관세 유예 시한 임박, 여한구 통상본부장 미국행하여 추가 유예 요청 협상 중",
+      "article_count": 7,
+      "bias_left": 1,
+      "bias_center": 6,
+      "bias_right": 0,
+      "article_ids": [
+        "175d8206-6e69-4783-9bf4-d82635ee99f9",
+        "3db0b19e-464a-4a12-bbd6-ae83a6baaa75",
+        "f2781e0d-eec9-4190-b86c-06f9ae659687",
+        "cd0e323b-a5c1-40d7-b83c-b10bc109e202",
+        "83102dcb-b585-4554-90d4-53b97bf6feb6",
+        "7c524b3f-4645-4bbd-a0b2-8804377e0b38",
+        "cc05b067-89c3-4f6f-ace4-2206d887277e"
+      ]
+    }
+  ]
+}
