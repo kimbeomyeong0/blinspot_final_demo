@@ -31,9 +31,14 @@ SUPABASE_URL = os.getenv('SUPABASE_URL')
 SUPABASE_KEY = os.getenv('SUPABASE_ANON_KEY')
 
 if not SUPABASE_URL or not SUPABASE_KEY:
-    raise ValueError("SUPABASE_URL과 SUPABASE_ANON_KEY 환경 변수를 설정해주세요.")
-
-supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+    print("⚠️  환경 변수 누락: SUPABASE_URL 또는 SUPABASE_ANON_KEY가 설정되지 않았습니다.")
+    print("🔧 Railway에서 환경 변수를 설정해주세요:")
+    print("   - SUPABASE_URL: Supabase 프로젝트 URL")
+    print("   - SUPABASE_ANON_KEY: Supabase anon key")
+    # 개발 모드에서는 None 허용
+    supabase = None
+else:
+    supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # 응답 모델들
 class BiasGauge(BaseModel):
@@ -83,6 +88,9 @@ async def root():
 @app.get("/api/issues", response_model=List[IssueCard])
 async def get_issues(category: Optional[str] = None, limit: int = 20):
     """이슈 목록 조회 (편향성 게이지 포함)"""
+    if not supabase:
+        raise HTTPException(status_code=503, detail="데이터베이스 연결이 설정되지 않았습니다. 환경 변수를 확인해주세요.")
+    
     try:
         query = supabase.table('issues').select('*')
         
@@ -115,6 +123,9 @@ async def get_issues(category: Optional[str] = None, limit: int = 20):
 @app.get("/api/issues/{issue_id}")
 async def get_issue_detail(issue_id: str):
     """이슈 상세 정보 조회"""
+    if not supabase:
+        raise HTTPException(status_code=503, detail="데이터베이스 연결이 설정되지 않았습니다. 환경 변수를 확인해주세요.")
+    
     try:
         response = supabase.table('issues').select('*').eq('id', issue_id).execute()
         
@@ -157,6 +168,9 @@ async def get_issue_detail(issue_id: str):
 @app.get("/api/articles/{issue_id}", response_model=List[ArticleInfo])
 async def get_issue_articles(issue_id: str):
     """이슈별 기사 목록 조회 (bias 포함)"""
+    if not supabase:
+        raise HTTPException(status_code=503, detail="데이터베이스 연결이 설정되지 않았습니다. 환경 변수를 확인해주세요.")
+    
     try:
         # issue_id를 UUID로 변환 (타입 불일치 방지)
         try:
@@ -208,6 +222,9 @@ async def get_issue_articles(issue_id: str):
 @app.get("/api/stats", response_model=StatsInfo)
 async def get_stats():
     """전체 통계 정보 조회"""
+    if not supabase:
+        raise HTTPException(status_code=503, detail="데이터베이스 연결이 설정되지 않았습니다. 환경 변수를 확인해주세요.")
+    
     try:
         # 이슈 수
         issues_response = supabase.table('issues').select('category').execute()
