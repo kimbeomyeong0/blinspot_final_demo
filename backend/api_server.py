@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import os
 from dotenv import load_dotenv
 from supabase.client import create_client
@@ -81,7 +81,7 @@ async def root():
     }
 
 @app.get("/api/issues", response_model=List[IssueCard])
-async def get_issues(category: str = None, limit: int = 20):
+async def get_issues(category: Optional[str] = None, limit: int = 20):
     """이슈 목록 조회 (편향성 게이지 포함)"""
     try:
         query = supabase.table('issues').select('*')
