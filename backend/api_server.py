@@ -30,6 +30,12 @@ app.add_middleware(
 SUPABASE_URL = os.getenv('SUPABASE_URL')
 SUPABASE_KEY = os.getenv('SUPABASE_ANON_KEY')
 
+# 환경 변수에서 불필요한 문자 제거 (줄바꿈, 공백 등)
+if SUPABASE_URL:
+    SUPABASE_URL = SUPABASE_URL.strip()
+if SUPABASE_KEY:
+    SUPABASE_KEY = SUPABASE_KEY.strip()
+
 if not SUPABASE_URL or not SUPABASE_KEY:
     print("⚠️  환경 변수 누락: SUPABASE_URL 또는 SUPABASE_ANON_KEY가 설정되지 않았습니다.")
     print("🔧 Railway에서 환경 변수를 설정해주세요:")
